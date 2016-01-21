@@ -1,33 +1,23 @@
-Plugin Builder Results
+-------------------------------------------------
+"Gaeta"  Plugin  is a Cesium viewer of QGIS data
+-------------------------------------------------
 
-Your plugin gaeta was created in:
-    C:\Users\rangeletti\.qgis2\python\plugins\gaeta
+Images:
+https://drive.google.com/file/d/0By5p_WoL_LoFRWhkQ1czU0FzRFE/view?usp=sharing
+https://drive.google.com/file/d/0By5p_WoL_LoFQVE3bXRaTkRMR3M/view?usp=sharing
 
-Your QGIS plugin directory is located at:
-    C:/Users/rangeletti/.qgis2/python/plugins
+To test "Gaeta"  you need to have  a web browser with WebGL.
 
-What's Next:
+Before to use "Gaeta" plugin, you need to start the following two lines 
+on a dos terminal :
 
-  * Copy the entire directory containing your new plugin to the QGIS plugin
-    directory
+cd C:/Users/MYUSER/.qgis2/python/plugins/gaeta/_WebServer/
+python -m CGIHTTPServer 8000
 
-  * Compile the resources file using pyrcc4
 
-  * Run the tests (``make test``)
+Then use QGIS normally, asking "Gaeta" plugin to see your data inside a Cesium
+WebGL 3D globe.
 
-  * Test the plugin by enabling it in the QGIS plugin manager
 
-  * Customize it by editing the implementation file: ``gaeta.py``
+geodrinx@gmail.com
 
-  * Create your own custom icon, replacing the default icon.png
-
-  * Modify your user interface by opening gaeta.ui in Qt Designer
-
-  * You can use the Makefile to compile your Ui and resource files when
-    you make changes. This requires GNU make (gmake)
-
-For more information, see the PyQGIS Developer Cookbook at:
-http://www.qgis.org/pyqgis-cookbook/index.html
-
-(C) 2011-2014 GeoApt LLC - geoapt.com
-Git revision : $Format:%H$
