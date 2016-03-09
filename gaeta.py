@@ -40,9 +40,28 @@ import time
 import webbrowser
 
 
+
+# ----------------------------------------------------
+def startGeoDrink_Server(self):
+ 
+				global serverStarted
+
+				if ( serverStarted == 0) :
+
+					serverStarted = 1
+					
+					print ("Start GDX_Server Start --------!!!\npython -m CGIHTTPServer 8000\n")
+          
+          
+        
 # GDX_Publisher --------------------------------------
 
 def GDX_Publisher(self):
+
+#				global serverStarted
+
+#				if ( serverStarted == 0) :
+#				   startGeoDrink_Server(self)
 
 
 				mapCanvas = self.iface.mapCanvas()
@@ -1236,6 +1255,10 @@ def GDX_Publisher2(self, kml):
 class gaeta:
 
     def __init__(self, iface):
+    
+        global serverStarted
+        serverStarted = 0    
+    
         # Save reference to the QGIS interface
         self.iface = iface
         # initialize plugin directory
@@ -1273,6 +1296,8 @@ class gaeta:
 
     # run method that performs all the real work
     def run(self):
+
+				global serverStarted
 
 				tempdir = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "/python/plugins/gaeta/_WebServer/cesium/Apps/cesiumViewer/"
 				
@@ -1565,13 +1590,16 @@ class gaeta:
 #
 				    #kml.close()
 
-
+				if (serverStarted == 0):
+				   retval = os.getcwd()            
+				   path = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "/python/plugins/gaeta/_WebServer/"
+				   os.chdir( path )
+				   pattiPy = retval + '/python'
+				   os.spawnl(os.P_NOWAIT, pattiPy, " -m CGIHTTPServer 8000")
+				   serverStarted = 1
+#				   os.chdir( retval )
 
 #				webbrowser.open_new("http://localhost:8000/cesium/Apps/cesiumViewer/index.html")
 				webbrowser.open("http://localhost:8000/cesium/Apps/cesiumViewer/index.html", new=0, autoraise=True)        
 
-#				if sys.platform[:3] == "win":
-#				    class WindowsDefault(BaseBrowser):
-#				        def open(self, url, new=0, autoraise=True):
-#				            try:
-#				                os.startfile(url)
+

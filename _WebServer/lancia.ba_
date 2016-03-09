@@ -1,2 +1,0 @@
-rem python -m SimpleHTTPServer
-python -m CGIHTTPServer 8000

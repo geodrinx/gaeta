@@ -10,6 +10,8 @@
 name=gaeta
 qgisMinimumVersion=2.0
 description=Gaeta - Geo Analysis & Terrain Animation - Cesium Viewer
+about=Gaeta plugin for QuantumGIS 
+    .
 version=0.1
 author=GeoDrinX
 email=geodrinx@gmail.com
