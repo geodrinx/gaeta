@@ -68,7 +68,7 @@ def GDX_Publisher(self):
 
 #    dataSource.loadUrl('h ttp://localhost:8000/cesium/Apps/cesiumViewer/temp/gaetaDoc.kml');				
 
-				tempdir = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "/python/plugins/gaeta/_WebServer/cesium/Apps/cesiumViewer/"
+				tempdir = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "python/plugins/gaeta/_WebServer/cesium/Apps/cesiumViewer/"
         
 				adesso = str(datetime.datetime.now())
 				adesso = adesso.replace(" ","_")
@@ -98,7 +98,7 @@ def GDX_Publisher(self):
 
 				out_folder = tempdir
 				
-				kml = codecs.open(out_folder + '/gaetaDoc.kml', 'w', encoding='utf-8')
+				kml = codecs.open(out_folder + 'gaetaDoc.kml', 'w', encoding='utf-8')
 #				kml=open(out_folder + '/doc.kml', 'w')
 				#
 
@@ -746,7 +746,7 @@ def GDX_Publisher2(self, kml):
 				mapCanvas = self.iface.mapCanvas()
 				
 #				tempdir = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "/python/plugins/gearthview/temp"
-				tempdir = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "/python/plugins/gaeta/_WebServer/cesium/Apps/cesiumViewer/"
+				tempdir = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "python/plugins/gaeta/_WebServer/cesium/Apps/cesiumViewer/"
 
 				adesso = str(datetime.datetime.now())
 				adesso = adesso.replace(" ","_")
@@ -1299,7 +1299,7 @@ class gaeta:
 
 				global serverStarted
 
-				tempdir = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "/python/plugins/gaeta/_WebServer/cesium/Apps/cesiumViewer/"
+				tempdir = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "python/plugins/gaeta/_WebServer/cesium/Apps/cesiumViewer/"
 				
 
 #  Adesso scrivo il vettoriale
@@ -1369,7 +1369,7 @@ class gaeta:
 
 				    out_folder = tempdir
 				
-#				    kml = codecs.open(out_folder + '/gaetaDoc.kml', 'w', encoding='utf-8')
+#				    kml = codecs.open(out_folder + 'gaetaDoc.kml', 'w', encoding='utf-8')
 
 				    #Write the KML
             
@@ -1394,7 +1394,7 @@ class gaeta:
 
 #				    out_folder = tempdir
 #				
-#				    kml = codecs.open(out_folder + '/gaetaDoc.geojson', 'w', encoding='utf-8')
+#				    kml = codecs.open(out_folder + 'gaetaDoc.geojson', 'w', encoding='utf-8')
 #
 				    ##Write the geoJson header
 #
@@ -1472,7 +1472,7 @@ class gaeta:
 #
 #				    out_folder = tempdir
 #				
-#				    kml = codecs.open(out_folder + '/gaetaDoc.czml', 'w', encoding='utf-8')
+#				    kml = codecs.open(out_folder + 'gaetaDoc.czml', 'w', encoding='utf-8')
 #
 #				    #Write the czml header
 
@@ -1592,7 +1592,7 @@ class gaeta:
 
 				if (serverStarted == 0):
 				   retval = os.getcwd()            
-				   path = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "/python/plugins/gaeta/_WebServer/"
+				   path = unicode(QFileInfo(QgsApplication.qgisUserDbFilePath()).path()) + "python/plugins/gaeta/_WebServer/"
 				   os.chdir( path )
 				   pattiPy = retval + '/python'
 				   os.spawnl(os.P_NOWAIT, pattiPy, " -m CGIHTTPServer 8000")
