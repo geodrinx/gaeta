@@ -18,7 +18,7 @@ email=geodrinx@gmail.com
 
 about="Gaeta"- Geo Analysis & Terrain Animation Cesium Viewer plugin for QGIS
 
-tracker=http://github.com/geodrinx/gaeta/tracker
+tracker=https://github.com/geodrinx/gaeta/issues
 repository=http://github.com/geodrinx/gaeta
 # End of mandatory metadata
 
