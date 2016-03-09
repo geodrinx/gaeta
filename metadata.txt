@@ -13,7 +13,7 @@ description=Gaeta - Geo Analysis & Terrain Animation - Cesium Viewer
 about=Gaeta plugin for QuantumGIS 
     .
 version=0.1
-author=GeoDrinX
+author=geodrinx
 email=geodrinx@gmail.com
 
 about="Gaeta"- Geo Analysis & Terrain Animation Cesium Viewer plugin for QGIS
