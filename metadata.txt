@@ -34,7 +34,7 @@ homepage=http://github.com/geodrinx/gaeta
 category=Web
 icon=icon.png
 # experimental flag
-experimental=False
+experimental=True
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False
